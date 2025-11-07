@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://vtqmxovk51mo"]
+
+[ext_resource type="Script" uid="uid://bb21s6fpj4wlp" path="res://GameModules/Combat/grid_manager.gd" id="1_rqt0n"]
+
+[node name="GridManager" type="Node" groups=["grid_manager"]]
+script = ExtResource("1_rqt0n")

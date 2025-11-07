@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://dqmttts0u4rgv"]
+
+[ext_resource type="Script" uid="uid://ba1tl2kgdn2ta" path="res://GameModules/UI/selection_indicator.gd" id="1_dsffq"]
+[ext_resource type="Script" uid="uid://bmktanktgexc7" path="res://GameModules/Avatar/avatar_cochi.gd" id="1_wgrqf"]
+[ext_resource type="Texture2D" uid="uid://cqxp5uqkyvxjn" path="res://Assets/Sprites/avatares-spr/horne.png" id="2_dmiwa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wgrqf"]
+size = Vector2(30, 30)
+
+[node name="AvatarCochi" type="CharacterBody2D"]
+input_pickable = true
+motion_mode = 1
+script = ExtResource("1_wgrqf")
+avatar_name = "Cochi"
+move_speed = null
+arms_count = null
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_dmiwa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_wgrqf")
+
+[node name="SelectionIndicator" type="Sprite2D" parent="."]
+script = ExtResource("1_dsffq")
