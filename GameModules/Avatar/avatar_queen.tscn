@@ -11,7 +11,7 @@ size = Vector2(30, 30)
 input_pickable = true
 motion_mode = 1
 script = ExtResource("1_04aga")
-avatar_name = "Kochi"
+avatar_name = "Queen"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_y6xg5")

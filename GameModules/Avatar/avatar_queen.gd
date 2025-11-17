@@ -21,7 +21,7 @@ Stats base:
 # ========================================
 func _ready() -> void:
 	# Configurar propiedades específicas
-	avatar_name = "Kochi"
+	avatar_name = "Queen"
 	arms_count = 4
 	move_speed = 200.0
 	
@@ -31,10 +31,10 @@ func _ready() -> void:
 	# Llamar _ready del padre
 	super._ready()
 	
-	print("[Cochinilla] Avatar listo con %d brazos" % arms_count)
+	print("[Reina] Avatar listo con %d brazos" % arms_count)
 
 func _setup_sprite() -> void:
-	"""Configura el sprite de Kochi"""
+	"""Configura el sprite de Queen"""
 	if not sprite:
 		return
 	
@@ -44,7 +44,7 @@ func _setup_sprite() -> void:
 	
 	if ResourceLoader.exists(sprite_path):
 		sprite.texture = load(sprite_path)
-		print("[Cochinilla] Sprite cargado: %s" % sprite_path)
+		print("[Reina] Sprite cargado: %s" % sprite_path)
 	else:
 		# Crear placeholder si no existe sprite
 		_create_placeholder_sprite()
@@ -72,17 +72,4 @@ func _create_placeholder_sprite() -> void:
 	img.set_pixel(21, 10, Color.WHITE)
 	
 	sprite.texture = ImageTexture.create_from_image(img)
-	print("[Cochinilla] Placeholder creado")
-
-# ========================================
-# HABILIDAD ESPECIAL (Futura)
-# ========================================
-func activate_ball_mode() -> void:
-	"""
-	Habilidad especial: Cochinilla se enrolla en bola
-	TODO: Implementar en futuras versiones
-	- Aumenta defensa
-	- Puede rodar más rápido
-	- Inmune a ciertos ataques
-	"""
-	print("[Cochinilla] Ball Mode (no implementado aún)")
+	print("[Reina] Placeholder creado")
