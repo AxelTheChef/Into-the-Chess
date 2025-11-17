@@ -35,7 +35,7 @@ PUBLIC API:
 # ========================================
 # CONSTANTES
 # ========================================
-const GRID_SIZE: int = 7          # Grid 7x7
+const GRID_SIZE: int = 14          # Grid 7x7
 const TILE_SIZE: int = 32         # Cada tile 32x32px
 const SCREEN_WIDTH: int = 1280    # Resolución proyecto
 const SCREEN_HEIGHT: int = 720

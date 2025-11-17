@@ -15,9 +15,12 @@ var avatar: AvatarBase = null
 # ========================================
 func _ready() -> void:
 	# Instanciar avatar
-	var avatar_scene: PackedScene = preload("res://GameModules/Avatar/avatar_cochi.tscn")
+	var avatar_scene: PackedScene = preload("res://GameModules/Avatar/avatar_kochi.tscn")
 	avatar = avatar_scene.instantiate()
 	add_child(avatar)
+	
+	
+	
 	
 	# Posicionar en centro del grid
 	avatar.teleport_to_grid(Vector2i(3, 3))

@@ -21,7 +21,7 @@ Stats base:
 # ========================================
 func _ready() -> void:
 	# Configurar propiedades específicas
-	avatar_name = "Cochinilla"
+	avatar_name = "Kochi"
 	arms_count = 4
 	move_speed = 200.0
 	
@@ -34,12 +34,13 @@ func _ready() -> void:
 	print("[Cochinilla] Avatar listo con %d brazos" % arms_count)
 
 func _setup_sprite() -> void:
-	"""Configura el sprite de la Cochinilla"""
+	"""Configura el sprite de Kochi"""
 	if not sprite:
 		return
 	
 	# Intentar cargar sprite real
-	var sprite_path: String = "res://Sprites/avatares-spr/horne.png"
+	var sprite_path: String = "res://Assets/Sprites/avatares-spr/horne.png"
+	
 	
 	if ResourceLoader.exists(sprite_path):
 		sprite.texture = load(sprite_path)
