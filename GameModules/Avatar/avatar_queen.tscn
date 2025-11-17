@@ -7,7 +7,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wgrqf"]
 size = Vector2(30, 30)
 
-[node name="AvatarKochi" type="CharacterBody2D"]
+[node name="AvatarQueen" type="CharacterBody2D"]
 input_pickable = true
 motion_mode = 1
 script = ExtResource("1_04aga")
