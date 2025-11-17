@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://dqmttts0u4rgv"]
 
-[ext_resource type="Script" uid="uid://bmktanktgexc7" path="res://GameModules/Avatar/avatar_kochi.gd" id="1_dcjss"]
-[ext_resource type="Texture2D" uid="uid://cqxp5uqkyvxjn" path="res://Assets/Sprites/avatares-spr/horne.png" id="2_g5xnb"]
-[ext_resource type="Script" uid="uid://ba1tl2kgdn2ta" path="res://GameModules/UI/selection_indicator.gd" id="3_mrb70"]
+[ext_resource type="Script" uid="uid://bmktanktgexc7" path="res://GameModules/Avatar/avatar_queen.gd" id="1_04aga"]
+[ext_resource type="Texture2D" uid="uid://cqxp5uqkyvxjn" path="res://Assets/Sprites/avatares-spr/horne.png" id="2_y6xg5"]
+[ext_resource type="Script" uid="uid://ba1tl2kgdn2ta" path="res://GameModules/UI/selection_indicator.gd" id="3_o21ec"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wgrqf"]
 size = Vector2(30, 30)
@@ -10,14 +10,14 @@ size = Vector2(30, 30)
 [node name="AvatarKochi" type="CharacterBody2D"]
 input_pickable = true
 motion_mode = 1
-script = ExtResource("1_dcjss")
+script = ExtResource("1_04aga")
 avatar_name = "Kochi"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_g5xnb")
+texture = ExtResource("2_y6xg5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_wgrqf")
 
 [node name="SelectionIndicator" type="Sprite2D" parent="."]
-script = ExtResource("3_mrb70")
+script = ExtResource("3_o21ec")
