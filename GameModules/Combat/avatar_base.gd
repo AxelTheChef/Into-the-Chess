@@ -4,7 +4,12 @@ class_name AvatarBase
 """
 AvatarBase - Clase padre de todos los avatares
 Role: ASISTENTE 1 - Avatar System
-Version: 1.0
+Version: 1.1 (Vmin - Día 3-4)
+
+ACTUALIZADO:
+- arms_count → equipment_slots: 2
+- Posición inicial: (3,3) → (7,2) centro de grid 14x5
+- Comentarios actualizados para Into The Chess
 
 Maneja:
 - Movimiento tile-by-tile en grid
@@ -33,13 +38,13 @@ PUBLIC API:
 # ========================================
 @export var avatar_name: String = "Avatar"
 @export var move_speed: float = 200.0  ## Píxeles por segundo
-@export var arms_count: int = 4        ## Número de brazos (para plantas)
+@export var equipment_slots: int = 2   ## Slots de equipamiento (piezas equipables)
 
 # ========================================
 # POSICIÓN EN GRID
 # ========================================
-var grid_position: Vector2i = Vector2i(3, 3)     ## Posición actual en grid
-var target_grid_position: Vector2i = Vector2i(3, 3)  ## Destino de movimiento
+var grid_position: Vector2i = Vector2i(7, 2)     ## Posición actual en grid (centro 14x5)
+var target_grid_position: Vector2i = Vector2i(7, 2)  ## Destino de movimiento
 var is_moving: bool = false
 
 # ========================================
@@ -51,7 +56,7 @@ var is_selected: bool = false
 # COMPONENTES (para otros asistentes)
 # ========================================
 var stats_manager: Node = null      ## Asistente 2 - Stats
-var equipment_manager: Node = null  ## Asistente 3 - Plantas
+var equipment_manager: Node = null  ## Asistente 3 - Piezas
 
 # ========================================
 # SEÑALES
@@ -83,7 +88,7 @@ func _ready() -> void:
 	if selection_indicator:
 		selection_indicator.visible = false
 	
-	print("[%s] Avatar inicializado en %s" % [avatar_name, grid_position])
+	print("[%s] Avatar inicializado en %s con %d equipment slots" % [avatar_name, grid_position, equipment_slots])
 
 func _find_components() -> void:
 	"""Busca componentes opcionales añadidos por otros asistentes"""
@@ -133,7 +138,7 @@ func _is_tile_walkable(grid_pos: Vector2i) -> bool:
 	Returns:
 		true si el tile está libre
 	"""
-	# TODO: Implementar collision detection con plantas/enemigos
+	# TODO: Implementar collision detection con piezas/enemigos
 	# Por ahora, solo verificar límites del grid
 	return GridManager.is_valid_grid_pos(grid_pos)
 
@@ -288,5 +293,5 @@ func print_status() -> void:
 	print("  World pos: %s" % global_position)
 	print("  Is moving: %s" % is_moving)
 	print("  Is selected: %s" % is_selected)
-	print("  Arms: %d" % arms_count)
+	print("  Equipment slots: %d" % equipment_slots)
 	print("================")

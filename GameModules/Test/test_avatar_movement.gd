@@ -15,7 +15,7 @@ var avatar: AvatarBase = null
 # ========================================
 func _ready() -> void:
 	# Instanciar avatar
-	var avatar_scene: PackedScene = preload("res://GameModules/Avatar/avatar_kochi.tscn")
+	var avatar_scene: PackedScene = preload("res://GameModules/Avatar/avatar_queen.tscn")
 	avatar = avatar_scene.instantiate()
 	add_child(avatar)
 	
